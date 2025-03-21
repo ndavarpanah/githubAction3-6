@@ -45,7 +45,7 @@ jobs:
       uses: actions/download-artifact@v4.0.0
       with:
         name: linux
-        path: /linux
+        path: ./linux
         
     - name: View Working Directory
       run: pwd     
@@ -72,7 +72,7 @@ jobs:
       uses: actions/download-artifact@v4.0.0
       with:
         name: windows
-        path: /windows
+        path: ./windows
         
     - name: View Folder Content
       run: ls     
