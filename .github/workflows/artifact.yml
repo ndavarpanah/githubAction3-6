@@ -48,7 +48,10 @@ jobs:
         path: .
         
     - name: View Folder Content
-      run: ls     
+      run: ls -la     
+      
+    - name: Make executable
+      run: chmod +x ./${{ env.FILE_NAME }}
 
     - name: Test ${{ env.FILE_NAME }}
       run: source ./test.sh
