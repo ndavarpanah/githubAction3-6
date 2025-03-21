@@ -46,6 +46,9 @@ jobs:
       with:
         name: linux
         path: .
+        
+    - name: View Folder Content
+      run: ls     
 
     - name: Test ${{ env.FILE_NAME }}
       run: source ./test.sh
@@ -64,6 +67,9 @@ jobs:
       with:
         name: windows
         path: .
+        
+    - name: View Folder Content
+      run: ls     
         
     - name: Test ${{ env.FILE_NAME }}
       run: windows/${{ env.FILE_NAME }}.exe
