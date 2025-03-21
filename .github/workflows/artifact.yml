@@ -45,7 +45,7 @@ jobs:
       uses: actions/download-artifact@v4.0.0
       with:
         name: linux
-        path: .
+        path: /linux
         
     - name: View Working Directory
       run: pwd     
@@ -72,10 +72,10 @@ jobs:
       uses: actions/download-artifact@v4.0.0
       with:
         name: windows
-        path: .
+        path: /windows
         
     - name: View Folder Content
       run: ls     
         
     - name: Test ${{ env.FILE_NAME }}
-      run: ${{ env.FILE_NAME }}.exe
+      run: windows/${{ env.FILE_NAME }}.exe
