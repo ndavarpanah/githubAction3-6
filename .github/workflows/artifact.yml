@@ -53,8 +53,8 @@ jobs:
     - name: Make executable
       run: chmod +x ./test.sh
       
-    - name: Verify shell can run
-      run: ls -la  
+    - name: veiw script
+      run: cat test.sh  
 
     - name: Test ${{ env.FILE_NAME }}
       run: source ./test.sh
@@ -78,4 +78,4 @@ jobs:
       run: ls     
         
     - name: Test ${{ env.FILE_NAME }}
-      run: windows/${{ env.FILE_NAME }}.exe
+      run: ${{ env.FILE_NAME }}.exe
