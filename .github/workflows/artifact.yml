@@ -47,8 +47,8 @@ jobs:
         name: linux
         path: .
         
-    - name: View Folder Content
-      run: ls -la     
+    - name: View Working Directory
+      run: pwd     
       
     - name: Make executable
       run: chmod +x ./test.sh
