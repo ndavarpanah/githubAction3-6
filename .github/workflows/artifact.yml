@@ -51,7 +51,10 @@ jobs:
       run: ls -la     
       
     - name: Make executable
-      run: chmod +x ./${{ env.FILE_NAME }}
+      run: chmod +x ./test.sh
+      
+    - name: Verify shell can run
+      run: ls -la  
 
     - name: Test ${{ env.FILE_NAME }}
       run: source ./test.sh
